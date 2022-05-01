@@ -1,4 +1,4 @@
-from re import I
+# made by Dhruv
 from Services.IAM import create_user_initial
 from Services.DB import store_user
 from Services.EC2 import create_instance 
@@ -55,6 +55,11 @@ def index():
     # if session['userid']=='' or session['userName']=='':
     #     return redirect('http://127.0.0.1/')
     return render_template('index.html')
+
+#back to ecom
+@app.route("/ecom")
+def ecom ():
+    return redirect("http://0.0.0.0:5000/")
 
 #create user at the time of registration
 @app.route('/load')
